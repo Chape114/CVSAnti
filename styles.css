@@ -557,9 +557,14 @@
 
 /* Oculta el grid en pantallas grandes */
 @media (min-width: 769px) {
-    .tools-grid, .tools-section h2 {
+    .tools-grid {
         display: none;
     }
+
+    .tools-section2 h2 {
+        display: none;
+    }
+
 }
 
 /* En pantallas pequeñas */
