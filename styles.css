@@ -458,13 +458,13 @@
 }
 
 .tools-section h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 1rem;
 }
 
 .intro {
     display: flex;
-    align-items: center;
+    align-items: left;
     margin-bottom: 2rem;
 }
 
@@ -492,47 +492,49 @@
     height: auto;
 }
 
+/* Oculta el grid en pantallas grandes */
 @media (min-width: 769px) {
-    .tools-table {
-        display: table; /* Muestra la tabla en pantallas grandes */
-    }
-
-    .tools-grid {
-        display: none; /* Oculta el grid en pantallas grandes */
+    .tools-grid, .tools-section h2 {
+        display: none;
     }
 }
 
+/* En pantallas pequeñas */
 @media (max-width: 768px) {
+
     .tools-table {
-        display: none; /* Oculta la tabla en pantallas pequeñas */
+        display: none;
     }
 
     .tools-grid {
-        display: flex; /* Usa flexbox para alinear los elementos en línea */
-        flex-wrap: wrap; /* Permite que se envuelvan en varias líneas */
-        gap: 1rem; /* Espacio entre tarjetas */
-        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Varias columnas responsivas */
+        gap: 1rem;
+        margin-top: 0.5rem;
     }
 
     .tool-card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0.5rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .tool-card img {
-        max-width: 40px; /* Ajusta el tamaño de las imágenes en tarjetas */
+        max-width: 50px; /* Ajusta el tamaño de las imágenes */
     }
 
-    /* Estilo para los títulos en pantallas pequeñas */
     .tools-section h2 {
-        margin-top: 2rem; /* Espacio arriba del título */
-        margin-bottom: 0.5rem; /* Espacio abajo del título */
-        font-size: 1.2rem; /* Tamaño de fuente del título */
-        text-align: left; /* Alineación del texto */
+        margin: 1rem 0 0.5rem;
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 }
+
 
 
 
