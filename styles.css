@@ -6,7 +6,7 @@
         }
         .intro-section {
             padding: 40px 0;
-            margin-top: 150px;
+            margin-top: 60px;
         }
         .intro-left h1 {
             font-size: 2.0rem;
@@ -62,27 +62,28 @@
 /* Menú de navegación estilo glass con fondo negro vidrioso */
 .glass-menu {
     position: fixed;
-    top: 20px; /* Añade margen superior */
+    top: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Centra el contenedor horizontalmente */
-    width: 40%; /* Ajusta el ancho del menú */
+    transform: translateX(-50%);
+    width: 40%; /* Para pantallas grandes */
     display: flex;
-    justify-content: center; /* Centra los elementos dentro del contenedor */
+    justify-content: center;
     align-items: center;
     padding: 10px 50px;
-    background: rgba(0, 0, 0, 0.4); /* Fondo negro con transparencia */
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Contenedor para centrar logo y enlaces */
 .glass-menu .menu-content {
     display: flex;
     align-items: center;
-    justify-content: center; /* Asegura que el logo y el menú estén centrados */
-    gap: 30px;
+    justify-content: center;
+    gap: 30px; /* Espaciado entre el logo y los enlaces */
 }
 
 /* Estilos para el logo */
@@ -99,7 +100,7 @@
     padding: 0;
     display: flex;
     gap: 30px; /* Espaciado entre enlaces */
-    justify-content: center; /* Centra los enlaces dentro de la lista */
+    justify-content: center;
 }
 
 /* Enlaces del menú */
@@ -112,8 +113,52 @@
 
 /* Hover en enlaces */
 .glass-menu ul li a:hover {
-    color: #a01a58; /* Color al hacer hover */
+    color: #a01a58;
 }
+
+/* ----- Responsividad ----- */
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .glass-menu {
+        width: 70%; /* Aumenta el ancho del menú */
+        padding: 10px 30px; /* Ajusta el padding */
+    }
+
+    .glass-menu .logo {
+        font-size: 1.25rem; /* Reduce el tamaño del logo */
+    }
+
+    .glass-menu ul {
+        gap: 20px; /* Reduce el espacio entre los enlaces */
+    }
+
+    .glass-menu ul li a {
+        font-size: 0.9rem; /* Reduce el tamaño del texto de los enlaces */
+    }
+}
+
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .glass-menu {
+        width: 90%; /* Ocupa casi todo el ancho de la pantalla */
+        padding: 10px 20px; /* Reduce el padding */
+
+    }
+
+    .glass-menu .logo {
+        font-size: 1rem; /* Reduce el tamaño del logo en pantallas pequeñas */
+    }
+
+    .glass-menu ul {
+        gap: 10px; /* Reduce el espacio entre los enlaces */
+    }
+
+    .glass-menu ul li a {
+        font-size: 0.8rem; /* Reduce el tamaño del texto de los enlaces */
+    }
+}
+
 
 
 
