@@ -673,3 +673,107 @@ h3 {
     font-size: 24px;
     color: #000;
 }
+
+
+
+
+
+/* Estilos generales para la sección de contacto */
+.contact-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, rgba(160, 26, 88, 0.1), rgba(0, 0, 0, 0.05));
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #a01a58;
+    margin: 10px auto 0;
+}
+
+.contact-intro {
+    font-size: 1.125rem;
+    margin-bottom: 40px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: #a01a58;
+    margin-bottom: 15px;
+}
+
+.contact-card h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-card a {
+    font-size: 1.125rem;
+    color: #a01a58;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+    color: #555;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+
+.footer {
+    background-color: #a01a58; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    padding: 5px 0; /* Espaciado vertical */
+    position: relative; /* Para posicionar el footer */
+    bottom: 0;
+    width: 100%; /* Ancho completo */
+}
