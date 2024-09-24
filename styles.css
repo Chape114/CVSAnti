@@ -201,7 +201,7 @@
         width: 90%; /* Ocupa casi todo el ancho de la pantalla */
         padding: 10px 20px; /* Reduce el padding */
         background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(30px);
 
     }
 
@@ -365,6 +365,15 @@
 
 }
 
+@media (max-width: 768px) {
+.projects-section h2{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+}
+
+
 
 
 .projects-section  .h2{
@@ -438,6 +447,10 @@
 
 
 
+
+
+
+
 .skills-knowledge-section {
     padding: 60px 0;
     font-family: 'Montserrat', sans-serif;
@@ -449,12 +462,26 @@
     font-weight: 700;
 }
 
+@media (max-width: 768px) {
+    .skills-knowledge-section h2{
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 22px;
+    }
+
+    .skills-knowledge-section .intro p {
+        font-size: 1rem;
+
+    }
+    }
+
 .intro {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
     border-left: 5px solid #a01a58; /* Línea decorativa */
     padding-left: 20px;
+    margin-bottom: 22px;
 }
 
 
@@ -465,8 +492,8 @@
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.25rem;
+    font-weight: bold;
     color: #212529;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -525,6 +552,7 @@
 
 .soft-skills-section {
     padding: 60px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .soft-skills-section h2 {
@@ -532,6 +560,22 @@
     margin-bottom: 20px;
     font-weight: 700;
 }
+
+@media (max-width: 768px) {
+    .soft-skills-section h2{
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 22px;
+    }
+    .soft-skills-section .intro p{
+        font-size: 1rem;
+    }
+
+    .soft-skills-section h3 {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    }
 
 .intro {
     display: flex;
@@ -607,6 +651,7 @@
 /* Sección de Herramientas en Uso */
 .tools-section {
     padding: 2rem 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .tools-section h2 {
@@ -701,12 +746,32 @@
 
 .education-section {
     padding: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    .education-section h2{
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 22px;
+    }
+    .education-section .edu-info h3 {
+        font-size: 0.8rem;
+    }
+
+    .education-section .edu-info p {
+        font-size: 0.7rem;
+    }
+
+    .education-section .edu-year {
+        font-size: 0.8rem;
+    }
+    }
 
 h2 {
     font-size: 28px;
@@ -772,6 +837,7 @@ h3 {
     padding: 60px 20px;
     background: linear-gradient(135deg, rgba(160, 26, 88, 0.1), rgba(0, 0, 0, 0.05));
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .section-title {
@@ -858,6 +924,7 @@ h3 {
 
 
 .footer {
+    font-family: 'Montserrat', sans-serif;
     background-color: #a01a58; /* Color de fondo */
     color: #ffffff; /* Color del texto */
     text-align: center; /* Centrar texto */
@@ -865,4 +932,5 @@ h3 {
     position: relative; /* Para posicionar el footer */
     bottom: 0;
     width: 100%; /* Ancho completo */
+    font-size: 0.8rem;
 }
