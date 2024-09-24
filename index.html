@@ -631,19 +631,34 @@
             });
         }
 
-        // Agregar efecto de hover suave a las herramientas
+        // Agregar efecto de hover suave a las herramientas (solo en escritorio)
         const toolCards = document.querySelectorAll('.tool-card');
         
         toolCards.forEach(card => {
-            card.addEventListener('mouseover', function () {
-                card.style.transition = "transform 0.5s ease";
-                card.style.transform = "translateY(-10px)"; // Mover la card hacia arriba
-            });
+            // Detectar si es una pantalla táctil o no
+            if (window.matchMedia("(hover: hover)").matches) {
+                // En pantallas de escritorio
+                card.addEventListener('mouseover', function () {
+                    card.style.transition = "transform 0.5s ease";
+                    card.style.transform = "translateY(-10px)"; // Mover la card hacia arriba
+                });
 
-            card.addEventListener('mouseout', function () {
-                card.style.transition = "transform 0.5s ease";
-                card.style.transform = "translateY(0)"; // Devolver la card a su posición original
-            });
+                card.addEventListener('mouseout', function () {
+                    card.style.transition = "transform 0.5s ease";
+                    card.style.transform = "translateY(0)"; // Devolver la card a su posición original
+                });
+            } else {
+                // En pantallas móviles, mostrar movimiento al hacer clic
+                card.addEventListener('touchstart', function () {
+                    card.style.transition = "transform 0.5s ease";
+                    card.style.transform = "translateY(-10px)";
+                });
+
+                card.addEventListener('touchend', function () {
+                    card.style.transition = "transform 0.5s ease";
+                    card.style.transform = "translateY(0)";
+                });
+            }
         });
     });
 
@@ -661,6 +676,7 @@
         }
     });
 </script>
+
 
 <!-- CDN de jQuery y Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
