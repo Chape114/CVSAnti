@@ -600,49 +600,55 @@
 </section>
 
 
-
-
 <footer class="footer">
     <div class="container">
         <p>Diseño y programación por Santiago Chiappero - 2024</p>
     </div>
 </footer>
 
-
-
-
-
 <script>
     // Asegúrate de que el DOM esté cargado antes de agregar los eventos
-window.addEventListener('DOMContentLoaded', () => {
-    // Scroll suave al hacer clic en los enlaces del menú
-    document.querySelectorAll('.glass-menu a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            window.scrollTo({
-                top: target.offsetTop - 100, // Ajuste para el menú fijo
-                behavior: 'smooth'
+    window.addEventListener('DOMContentLoaded', () => {
+        // Scroll suave al hacer clic en los enlaces del menú
+        document.querySelectorAll('.glass-menu a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 100, // Ajuste para el menú fijo
+                    behavior: 'smooth'
+                });
             });
         });
+
+        // Scroll suave al hacer clic en el botón "Hablemos!"
+        const contactButton = document.querySelector('.intro-left .btn-primary');
+        if (contactButton) {
+            contactButton.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                window.scrollTo({
+                    top: target.offsetTop - 100, // Ajuste para el menú fijo
+                    behavior: 'smooth'
+                });
+            });
+        }
     });
 
-    // Scroll suave al hacer clic en el botón "Hablemos!"
-    const contactButton = document.querySelector('.intro-left .btn-primary');
-    if (contactButton) {
-        contactButton.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            window.scrollTo({
-                top: target.offsetTop - 100, // Ajuste para el menú fijo
-                behavior: 'smooth'
+    // Script para rastrear el desplazamiento a la sección de contacto
+    window.addEventListener('scroll', function() {
+        const contactoSection = document.querySelector('#contact');
+        const rect = contactoSection.getBoundingClientRect();
+        
+        // Verifica si la sección de contacto está visible en la ventana
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            gtag('event', 'scroll_contact', {
+                'event_category': 'Navegación',
+                'event_label': 'Visita a Contacto'
             });
-        });
-    }
-});
-
+        }
+    });
 </script>
-
 
 <!-- CDN de jQuery y Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
