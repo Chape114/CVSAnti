@@ -28,15 +28,65 @@
             margin-right: 10px;
             color: #6c757d;
         }
-        .intro-left .btn-primary {
-            background-color: #a01a58;
-            border: none;
-            padding: 5px 40px;
-            margin-top: 20px;
-            border-radius: 35px;
-            font-weight: bold;
-        }
+
+
+
+
+
+
+/* Estilo del botón normal */
+.intro-left .btn-primary {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #a01a58;
+    color: white;
+    border: none;
+    padding: 7px 40px;
+    margin-top: 20px;
+    border-radius: 35px;
+    font-weight: medium;
+    transition: background-color 0.4s ease; /* Solo se aplica a color de fondo */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover en el botón */
+.intro-left .btn-primary:hover {
+    background-color: #7a1141; /* Color de fondo al hacer hover */
+    transition: background-color 0.4s ease;
+}
+
+/* Crea el efecto de carga simulada */
+.intro-left .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* El efecto de carga al hacer hover */
+.intro-left .btn-primary:hover::before {
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
         .profile-card {
+            font-family: 'Montserrat', sans-serif;
             background-color: #fff;
             padding: 10px;
             border-radius: 10px;
@@ -49,6 +99,7 @@
             object-fit: cover;
         }
         .profile-card .profile-name {
+            font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
         .profile-card .profile-bio {
@@ -59,8 +110,12 @@
 
 
 
+
+
+
 /* Menú de navegación estilo glass con fondo negro vidrioso */
 .glass-menu {
+    font-family: 'Montserrat', sans-serif;
     position: fixed;
     top: 20px;
     left: 50%;
@@ -168,7 +223,7 @@
             font-family: 'Montserrat', sans-serif;
         }
         .about-section h2 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 20px;
         }
@@ -181,6 +236,17 @@
             font-size: 1rem;
             line-height: 1.8;
             text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .about-section p {
+                font-size: 0.8rem;
+                line-height: 1.8;
+                text-align: justify;
+            }
+    
+
+
         }
         .about-content {
             border-left: 5px solid #a01a58; /* Línea decorativa */
@@ -200,12 +266,13 @@
 
         .skills-section {
             padding: 60px 0;
+            font-family: 'Montserrat', sans-serif;
+
         }
         
         .skills-section h2 {
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-bottom: 40px;
-            text-align: center;
             font-weight: 700;
         }
         
@@ -290,20 +357,25 @@
 
 .projects-section {
     padding: 60px 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+.projects-section  .h2{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .intro {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    border-left: 5px solid #a01a58; /* Línea decorativa */
+    padding-left: 20px;
 }
 
-.intro-bar {
-    width: 10px;
-    height: 70px;
-    background-color: #a01a58;
-    margin-right: 15px;
-}
 
 .intro p {
     font-size: 1.125rem;
@@ -364,6 +436,7 @@
 
 .skills-knowledge-section {
     padding: 60px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .skills-knowledge-section h2 {
@@ -376,14 +449,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    border-left: 5px solid #a01a58; /* Línea decorativa */
+    padding-left: 20px;
 }
 
-.intro-bar {
-    width: 5px;
-    height: 50px;
-    background-color: #a01a58;
-    margin-right: 15px;
-}
 
 .intro p {
     font-size: 1.125rem;
@@ -394,7 +463,7 @@
 .subtitle {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #a01a58;
+    color: #212529;
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -412,7 +481,16 @@
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
+
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+
+
 
 .skill-card i {
     font-size: 2rem;
@@ -486,7 +564,14 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease;
 }
+
+
+.soft-skill-item:hover {
+    transform: translateY(-10px);
+}
+
 
 .soft-skill-item i {
     font-size: 3rem;
