@@ -56,7 +56,10 @@
                     <span><span class="bullet">•</span> UX/UI Design</span>
                     <span><span class="bullet">•</span> Contenido</span>
                 </div>                
-                <a href="#contact" class="btn btn-primary">Hablemos!</a>
+                <a href="#contact" class="btn btn-primary" onclick="gtag('event', 'clic', {
+                    'event_category': 'Botones',
+                    'event_label': 'Hablemos'
+                  });">Hablemos!</a>                  
             </div>
             
             <!-- Columna derecha (Tarjeta de perfil) -->
@@ -565,24 +568,37 @@
         <h2 class="section-title">Contacto</h2>
         <p class="contact-intro">Estoy disponible para consultas, oportunidades y colaboración a través de los siguientes canales:</p>
         <div class="contact-grid">
+            <!-- WhatsApp -->
             <div class="contact-card">
                 <i class="fas fa-phone"></i>
                 <h4>WhatsApp</h4>
-                <a href="https://wa.me/5493493415669" target="_blank">+54 9 3493 415669</a>
+                <a href="https://wa.me/5493493415669" target="_blank" onclick="gtag('event', 'clic', {
+                    'event_category': 'Contacto',
+                    'event_label': 'WhatsApp'
+                });">+54 9 3493 415669</a>
             </div>
+            <!-- LinkedIn -->
             <div class="contact-card">
                 <i class="fab fa-linkedin"></i>
                 <h4>LinkedIn</h4>
-                <a href="https://www.linkedin.com/in/santiago-chiappero/" target="_blank">Santiago Chiappero</a>
+                <a href="https://www.linkedin.com/in/santiago-chiappero/" target="_blank" onclick="gtag('event', 'clic', {
+                    'event_category': 'Contacto',
+                    'event_label': 'LinkedIn'
+                });">Santiago Chiappero</a>
             </div>
+            <!-- Email -->
             <div class="contact-card">
                 <i class="fas fa-envelope"></i>
                 <h4>Email</h4>
-                <a href="mailto:santiachiappero@gmail.com">santiachiappero@gmail.com</a>
+                <a href="mailto:santiachiappero@gmail.com" onclick="gtag('event', 'clic', {
+                    'event_category': 'Contacto',
+                    'event_label': 'Email'
+                });">santiachiappero@gmail.com</a>
             </div>
         </div>
     </div>
 </section>
+
 
 
 
