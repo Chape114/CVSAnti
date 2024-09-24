@@ -178,6 +178,8 @@
     .glass-menu {
         width: 70%; /* Aumenta el ancho del menú */
         padding: 10px 30px; /* Ajusta el padding */
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
     }
 
     .glass-menu .logo {
@@ -198,6 +200,8 @@
     .glass-menu {
         width: 90%; /* Ocupa casi todo el ancho de la pantalla */
         padding: 10px 20px; /* Reduce el padding */
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
 
     }
 
