@@ -50,12 +50,7 @@
             <!-- Columna izquierda -->
             <div class="col-lg-6 intro-left">
                 <h1>Hola! Soy Santi Chiappero</h1>
-                <h2>Comunicador Digital</h2>
-                <div class="tags">
-                    <span><span class="bullet">•</span> Comunicación</span>
-                    <span><span class="bullet">•</span> UX/UI Design</span>
-                    <span><span class="bullet">•</span> Contenido</span>
-                </div>                
+                <h2>Comunicador <span class="typewriter"></span></h2>               
                 <a href="#contact" class="btn btn-primary" onclick="gtag('event', 'clic', {
                     'event_category': 'Botones',
                     'event_label': 'Hablemos'
@@ -676,6 +671,53 @@
         }
     });
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const typewriterElement = document.querySelector('.typewriter');
+        const words = ['Digital', 'Social', 'Estratégico', 'Creativo'];
+        let wordIndex = 0;
+        let letterIndex = 0;
+        let isDeleting = false;
+        let speed = 200; // Velocidad de la escritura
+
+        function type() {
+            const currentWord = words[wordIndex];
+            const displayText = currentWord.substring(0, letterIndex);
+
+            typewriterElement.textContent = displayText;
+
+            if (isDeleting) {
+                letterIndex--; // Borrado
+                speed = 150;    // Velocidad de borrado
+            } else {
+                letterIndex++; // Escribiendo
+                speed = 200;   // Velocidad de escritura
+            }
+
+            // Si ha terminado de escribir la palabra completa
+            if (!isDeleting && letterIndex === currentWord.length) {
+                speed = 1500;  // Pausa más corta al terminar de escribir
+                isDeleting = true; // Comenzar a borrar
+            }
+
+            // Si ha terminado de borrar la palabra
+            if (isDeleting && letterIndex === 0) {
+                isDeleting = false; // Comenzar a escribir la siguiente palabra
+                wordIndex = (wordIndex + 1) % words.length; // Ciclar las palabras
+                speed = 1000; // Pausa antes de comenzar la siguiente palabra
+            }
+
+            setTimeout(type, speed);
+        }
+
+        // Iniciar la animación
+        type();
+    });
+</script>
+
+
+
 
 
 <!-- CDN de jQuery y Bootstrap JS -->
