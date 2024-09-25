@@ -4,6 +4,22 @@
             background-color: #f1f0ea;
 
         }
+
+        /* Estilo básico para h2 con clase titles1 */
+        h2.titles1 {
+            text-align: left;  /* Alineación a la izquierda */
+            font-size: 1.5rem;  /* Tamaño de fuente */
+            font-weight: bold;  /* Negrita */
+            margin-bottom: 15px;
+        }
+
+        h3.subtitles1 {
+            text-align: left;  /* Alineación a la izquierda */
+            font-size: 1.25rem;  /* Tamaño de fuente */
+            font-weight: 800;  /* Negrita */
+            margin-bottom: 15px;
+        }
+
         .intro-section {
             padding: 40px 0;
             margin-top: 60px;
@@ -365,6 +381,7 @@
 
 }
 
+
 @media (max-width: 768px) {
 .projects-section h2{
     font-size: 1.25rem;
@@ -373,13 +390,6 @@
 }
 }
 
-
-
-
-.projects-section  .h2{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
 
 .intro {
     display: flex;
@@ -456,11 +466,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.skills-knowledge-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
 
 @media (max-width: 768px) {
     .skills-knowledge-section h2{
@@ -804,7 +809,7 @@ h2 {
     padding-right: 15px;            /* Añadir un poco de espacio entre info y el año */
 }
 
-.education-section  h3 {
+.education-section  h4 {
     margin: 0;
     font-size: 1.125rem;
     font-weight: bold;
