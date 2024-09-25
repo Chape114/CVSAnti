@@ -939,3 +939,12 @@ h2 {
     width: 100%; /* Ancho completo */
     font-size: 0.8rem;
 }
+
+
+
+
+@media (max-width: 768px) {
+    .intro p{
+        font-size: 1.0rem;
+    }
+}
