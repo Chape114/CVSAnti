@@ -2,7 +2,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f8f9fa; /* Color de fondo suave */
     color: #343a40; /* Color del texto */
-    padding: 20px; /* Espaciado alrededor del contenido */
 }
 
 /* Menú de navegación estilo glass con fondo negro vidrioso */
@@ -154,8 +153,14 @@ h2 {
 .dates {
     display: block; /* Hace que las fechas ocupen una línea separada */
     margin-bottom: 10px;
-    font-weight: bold;
+    font-weight: 600;
 }
+
+.company-name {
+    font-weight: bold;
+    color: #a01a58;
+}
+
 
 
 
@@ -187,9 +192,9 @@ h2 {
     background-color: #a01a58; /* Color de fondo */
     color: #ffffff; /* Color del texto */
     text-align: center; /* Centrar texto */
-    padding: 5px 0; /* Espaciado vertical */
     position: relative; /* Para posicionar el footer */
     bottom: 0;
     width: 100%; /* Ancho completo */
+    height: 25px;
     font-size: 0.8rem;
 }
