@@ -105,6 +105,9 @@ body {
     }
 }
 
+.container {
+    margin-top: 80px;
+}
 
 /* Estilos generales de la sección */
 #experience-section {
