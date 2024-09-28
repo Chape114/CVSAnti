@@ -223,7 +223,7 @@
 @media (max-width: 768px) {
     .glass-menu {
         width: 90%; /* Ocupa casi todo el ancho de la pantalla */
-        padding: 10px 20px; /* Reduce el padding */
+        padding: 10px 0px; /* Reduce el padding */
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(30px);
 
@@ -234,11 +234,11 @@
     }
 
     .glass-menu ul {
-        gap: 10px; /* Reduce el espacio entre los enlaces */
+        gap: 7px; /* Reduce el espacio entre los enlaces */
     }
 
     .glass-menu ul li a {
-        font-size: 0.8rem; /* Reduce el tamaño del texto de los enlaces */
+        font-size: 0.7rem; /* Reduce el tamaño del texto de los enlaces */
     }
 }
 
