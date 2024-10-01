@@ -1,0 +1,282 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    color: #333;    
+}
+
+/* Menú de navegación estilo glass con fondo negro vidrioso */
+.glass-menu {
+    font-family: 'Montserrat', sans-serif;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%; /* Para pantallas grandes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+.glass-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.glass-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 5px 15px; /* Añadir padding para una mejor área de clic */
+    border-radius: 15px; /* Hacer los enlaces más amigables */
+}
+
+.glass-menu ul li a:hover {
+    color: #fff;
+    background-color: #a01a58; /* Añadir un fondo para el hover */
+    transition: background-color 0.3s ease; /* Suavizar la transición */
+}
+
+/* ----- Contenedor principal centrado ----- */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Para centrar el contenedor horizontalmente */
+    padding: 100px 20px 0;
+    flex: 1;
+}
+
+/* Encabezado */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #a01a58;
+}
+
+/* Sección de introducción */
+.intro p {
+    font-size: 0.9rem;
+    margin: 0 auto;
+    line-height: 1.9;
+    color: #555;
+}
+
+
+.responsabilidades {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.responsabilidades h2 {
+    color: #a01a58; /* Color del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.cards-container {
+    display: flex; /* Utilizar flexbox para la alineación */
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
+    justify-content: space-between; /* Espacio entre las tarjetas */
+}
+
+.card {
+    background: #f9f9f9; /* Color de fondo de las tarjetas */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Espaciado interno */
+    margin: 10px; /* Margen entre tarjetas */
+    flex: 1 1 calc(30% - 20px); /* Ancho del 30% con espacio */
+    min-width: 280px; /* Ancho mínimo para tarjetas */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para el hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en hover */
+}
+
+
+.card h3 {
+    color: #a01a58; /* Color del título de la tarjeta */
+    margin: 0 0 10px; /* Margen debajo del título */
+    font-weight: 600;
+}
+
+.card p {
+    color: #555; /* Color del texto */
+    margin: 0; /* Sin margen */
+    font-weight: 300;
+}
+
+
+
+/* Logros - Línea de tiempo */
+.logros {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.logros h2 {
+    color: #a01a58; /* Color de encabezado */
+    margin-bottom: 20px;
+}
+
+
+
+.logro {
+    position: relative;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    background-color: #f9f9f9; /* Color de fondo de los logros */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.logro h3 {
+    color: #333; /* Color del título de logro */
+    margin: 0 0 5px;
+}
+
+.logro p {
+    color: #555; /* Color del texto */
+    margin: 0;
+}
+
+.timeline-event {
+    position: relative;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    background-color: white; /* Color de fondo de la tarjeta */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-event span {
+    display: block; /* Hacer que las fechas estén en una nueva línea */
+    font-size: 14px;
+    color: #777; /* Color de las fechas */
+    margin-top: 5px; /* Margen para separar del título */
+}
+
+/* Asegurarse de que las tarjetas de logros sean consistentes en estilo */
+.logro {
+    background: #f9f9f9;
+    border-left: 4px solid #a01a58; /* Línea en el lado izquierdo de las tarjetas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #a01a58;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----- Estilos Responsivos ----- */
+@media (max-width: 768px) {
+    .glass-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+}

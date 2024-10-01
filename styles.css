@@ -149,7 +149,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px 50px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
@@ -157,43 +157,31 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Contenedor para centrar logo y enlaces */
-.glass-menu .menu-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px; /* Espaciado entre el logo y los enlaces */
-}
-
-/* Estilos para el logo */
-.glass-menu .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-}
-
-/* Lista de navegación */
 .glass-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 30px; /* Espaciado entre enlaces */
+    gap: 30px;
     justify-content: center;
 }
 
-/* Enlaces del menú */
 .glass-menu ul li a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
     transition: color 0.3s ease;
+    padding: 5px 15px; /* Añadir padding para una mejor área de clic */
+    border-radius: 15px; /* Hacer los enlaces más amigables */
 }
 
-/* Hover en enlaces */
 .glass-menu ul li a:hover {
-    color: #a01a58;
+    color: #fff;
+    background-color: #a01a58; /* Añadir un fondo para el hover */
+    transition: background-color 0.3s ease; /* Suavizar la transición */
 }
+
+
 
 /* ----- Responsividad ----- */
 
