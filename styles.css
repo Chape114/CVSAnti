@@ -1,58 +1,158 @@
-        /* Estilos personalizados */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f1f0ea;
+/* Estilos personalizados */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F1F0EA;
 
-        }
-
-        /* Estilo básico para h2 con clase titles1 */
-        h2.titles1 {
-            text-align: left;  /* Alineación a la izquierda */
-            font-size: 1.5rem;  /* Tamaño de fuente */
-            font-weight: bold;  /* Negrita */
-            margin-bottom: 15px;
-        }
-
-        h3.subtitles1 {
-            text-align: left;  /* Alineación a la izquierda */
-            font-size: 1.25rem;  /* Tamaño de fuente */
-            font-weight: 800;  /* Negrita */
-            margin-bottom: 15px;
-        }
+}
 
 
-        .typewriter {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #343a40;
-            font-family: 'Montserrat', sans-serif;
-        }
 
-        .intro-section {
-            padding: 40px 0;
-            margin-top: 60px;
-        }
-        .intro-left h1 {
-            font-size: 2.0rem;
-            font-weight: medium;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .intro-left h2 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #343a40;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .intro-left .tags {
-            margin-top: 20px;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .intro-left .tags span {
-            font-size: 1rem;
-            margin-right: 10px;
-            color: #6c757d;
-        }
+/* Estilos generales del menú */
+.navbar {
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px 0; /* Espaciado superior e inferior */
+    margin-top: 35px;
+}
 
+.navbar .container {
+    display: flex; /* Usamos flexbox para la disposición */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centrado vertical */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centramos el contenedor */
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+.navbar-nav {
+    flex-grow: 1; /* Permitir que el menú ocupe el espacio disponible */
+    justify-content: center; /* Centrar el menú */
+}
+
+/* Centramos el menú en pantallas pequeñas */
+@media (max-width: 992px) {
+    .navbar-nav {
+        width: 100%; /* Ancho completo para ocupar el espacio */
+        justify-content: center; /* Centramos el menú */
+    }
+
+    .navbar-collapse {
+        text-align: center; /* Centra el texto en el menú hamburguesa */
+    }
+}
+
+/* Cambia el color del navbar-toggler */
+.navbar-toggler {
+    border: none; /* Sin borde */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Elimina el borde de enfoque */
+}
+
+/* Estilo de las barras del toggler */
+.navbar-toggler .navbar-toggler-icon {
+    background-color: transparent; /* Hacemos que el fondo sea transparente */
+}
+
+/* Barras con puntas redondeadas */
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after,
+.navbar-toggler .navbar-toggler-icon span {
+    content: '';
+    display: block;
+    width: 25px; /* Ajusta el ancho de las barras */
+    height: 4px; /* Ajusta la altura de las barras */
+    background-color: #a01a58; /* Color de las barras */
+    margin: 5px auto; /* Espaciado entre las barras */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Menú */
+.navbar-menu {
+    list-style: none; /* Sin viñetas */
+    display: flex; /* Elementos del menú en línea */
+    gap: 20px; /* Espaciado entre elementos del menú */
+}
+
+.navbar-menu li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #343a40; /* Color del texto */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    transition: color 0.3s ease; /* Transición suave para el color */
+    font-weight: 500;
+}
+
+.navbar-menu li a:hover {
+    color: #a01a58; /* Color al pasar el ratón */
+}
+
+.navbar-contact .btn-primary {
+    /* Usa el mismo estilo que el botón "Hablemos" */
+    background-color: #a01a58;
+    color: white;
+    border: none;
+    padding: 7px 40px;
+    border-radius: 35px;
+    font-weight: medium;
+    transition: background-color 0.4s ease;
+}
+
+.navbar-contact .btn-primary:hover {
+    background-color: #7a1141; /* Color de fondo al hacer hover */
+}
+
+
+
+
+/* Estilo básico para h2 con clase titles1 */
+h2.titles1 {
+    text-align: left;  /* Alineación a la izquierda */
+    font-size: 1.5rem;  /* Tamaño de fuente */
+    font-weight: bold;  /* Negrita */
+    margin-bottom: 15px;
+}
+
+h3.subtitles1 {
+    text-align: left;  /* Alineación a la izquierda */
+    font-size: 1.25rem;  /* Tamaño de fuente */
+    font-weight: 800;  /* Negrita */
+    margin-bottom: 15px;
+}
+
+
+
+
+.intro-section {
+    padding: 40px 0;
+    margin-top: 60px;
+}
+.intro-left h1 {
+    font-size: 3.3rem;
+    font-weight: medium;
+    font-family: 'Montserrat', sans-serif;
+}
+.intro-left h2 {
+    font-size: 3.0rem;
+    font-weight: bold;
+    color: #343a40;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.typewriter {
+    font-size: 3.0rem;
+    font-weight: bold;
+    color: #343a40;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-left h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem; /* Ajusta el tamaño según tus preferencias */
+    font-weight: 600; /* Puedes cambiar a bold si prefieres */
+    color: #a01a58; /* Mismo color que el h2 */
+    margin: 15px 0; /* Espaciado superior e inferior */
+}
 
 
 
@@ -60,175 +160,110 @@
 
 /* Estilo del botón normal */
 .intro-left .btn-primary {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #a01a58;
-    color: white;
-    border: none;
-    padding: 7px 40px;
-    margin-top: 20px;
-    border-radius: 35px;
-    font-weight: medium;
-    transition: background-color 0.4s ease; /* Solo se aplica a color de fondo */
-    position: relative;
-    overflow: hidden;
+font-family: 'Montserrat', sans-serif;
+font-size: 20px;
+background-color: #a01a58;
+color: white;
+border: none;
+padding: 12px 40px;
+margin-top: 20px;
+border-radius: 35px;
+font-weight: bold;
+transition: background-color 0.4s ease; /* Solo se aplica a color de fondo */
+position: relative;
+overflow: hidden;
 }
 
 /* Hover en el botón */
 .intro-left .btn-primary:hover {
-    background-color: #7a1141; /* Color de fondo al hacer hover */
-    transition: background-color 0.4s ease;
+background-color: #7a1141; /* Color de fondo al hacer hover */
+transition: background-color 0.4s ease;
 }
 
 /* Crea el efecto de carga simulada */
 .intro-left .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease-in-out;
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 0.2);
+transform: scaleX(0);
+transform-origin: left;
+transition: transform 0.5s ease-in-out;
 }
 
 /* El efecto de carga al hacer hover */
 .intro-left .btn-primary:hover::before {
-    transform: scaleX(1);
+transform: scaleX(1);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-        .profile-card {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .profile-card img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        .profile-card .profile-name {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-        }
-        .profile-card .profile-bio {
-            font-size: 0.9rem;
-            color: #212529;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-
-
-
-
-
-/* Menú de navegación estilo glass con fondo negro vidrioso */
-.glass-menu {
-    font-family: 'Montserrat', sans-serif;
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%; /* Para pantallas grandes */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 50px;
-    background: rgba(0, 0, 0, 0.6); /* Ajusta la opacidad */
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
+/* Ajustes para la imagen y el contenedor */
+.img-right {
+    max-width: 100%; /* La imagen ocupará un 50% del contenedor */
+    height: auto;
 }
 
-.glass-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
-
-.glass-menu ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    padding: 5px 15px; /* Añadir padding para una mejor área de clic */
-    border-radius: 15px; /* Hacer los enlaces más amigables */
-}
-
-.glass-menu ul li a:hover {
-    color: #fff;
-    background-color: #a01a58; /* Añadir un fondo para el hover */
-    transition: background-color 0.3s ease; /* Suavizar la transición */
+.img-right img {
+    width: 100%; /* Ajusta la imagen al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción correcta */
+    /* Efecto de difuminado en el borde inferior */
+    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
 
 
-
-/* ----- Responsividad ----- */
-
-/* Para pantallas medianas (tablets) */
-@media (max-width: 1024px) {
-    .glass-menu {
-        width: 70%; /* Aumenta el ancho del menú */
-        padding: 10px 30px; /* Ajusta el padding */
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(10px);
-    }
-
-    .glass-menu .logo {
-        font-size: 1.25rem; /* Reduce el tamaño del logo */
-    }
-
-    .glass-menu ul {
-        gap: 20px; /* Reduce el espacio entre los enlaces */
-    }
-
-    .glass-menu ul li a {
-        font-size: 0.9rem; /* Reduce el tamaño del texto de los enlaces */
-    }
-}
-
-/* Para pantallas pequeñas (celulares) */
 @media (max-width: 768px) {
-    .glass-menu {
-        width: 90%; /* Ocupa casi todo el ancho de la pantalla */
-        padding: 10px 0px; /* Reduce el padding */
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(30px);
 
+    .intro-section {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .intro-section .row {
+        flex-direction: column; /* Cambiar a columna para apilar elementos */
+        align-items: center; /* Centrar elementos horizontalmente */
     }
 
-    .glass-menu .logo {
-        font-size: 1rem; /* Reduce el tamaño del logo en pantallas pequeñas */
+    .img-right {
+        order: 1; /* Asegura que la imagen esté primero */
+        width: 100%; /* La imagen ocupará el 100% del ancho */
     }
 
-    .glass-menu ul {
-        gap: 7px; /* Reduce el espacio entre los enlaces */
+    .intro-left {
+        order: 2; /* Asegura que el texto esté segundo */
+        text-align: center; /* Centrar texto */
+        position: relative; /* Posición relativa para centrar el texto sobre la imagen */
+        margin-top: -40%; /* Ajustar la posición del texto para superponer sobre la imagen */
+    }
+    
+    /* Centrar los títulos y el botón en la parte superior de la imagen */
+    .intro-left h1,
+    .intro-left h2,
+    .intro-left h3 {
+        margin: 0; /* Eliminar márgenes para alineación */
+        padding: 5px 0; /* Espaciado entre los elementos */
     }
 
-    .glass-menu ul li a {
-        font-size: 0.7rem; /* Reduce el tamaño del texto de los enlaces */
+    .intro-left h1 {
+        font-weight: bold;
+    }
+
+    .intro-left h3 {
+        font-size: 1.0rem;
+    }
+
+    .intro-left .btn-primary {
+        margin-top: 20px; /* Espaciado para el botón */
     }
 }
+
+
+
+
+
+
 
 
 
