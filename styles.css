@@ -246,7 +246,7 @@ transform: scaleX(1);
     }
 
     .img-right {
-        order: 1; /* Asegura que la imagen esté primero */
+        order: 0; /* Asegura que la imagen esté primero */
         width: 100%; /* La imagen ocupará el 100% del ancho */
     }
 
