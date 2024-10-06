@@ -26,17 +26,35 @@
 </head>
 <body>
 
-    <div class="glass-menu">
-        <div class="menu-content">
-            <ul>
-                <li><a href="index.html#about-section">Me</a></li>
-                <li><a href="index.html#projects-section">Proyectos</a></li>
-                <li><a href="index.html#skills-knowledge-section">Skills</a></li>
-                <li><a href="index.html#education-section">Educación</a></li>
-                <li><a href="experience.html">Experiencia</a></li>
-            </ul>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="src/images/pip.png" alt="Logo" class="img-fluid rounded-circle" style="width: 80px; height: auto;">
+            </a>
+    
+            <!-- Botón para hamburguesa en pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Contenido del menú -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto navbar-menu">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html  ">Skills</a></li>
+                    
+                </ul>
+                <!-- Botón Contacto -->
+                <div class="navbar-contact">
+                    <a href="#contact" class="btn btn-primary">Contacto</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </nav>
     
     <div class="container">
         <section id="experience-section">
@@ -280,25 +298,21 @@
             </div>
         </div>
     </section>
-    
-
-    
-
-    
-    
-    
 
 
-    <footer class="footer">
-        <div class="container">
-            <p>Diseño y programación por Santiago Chiappero - 2024</p>
-        </div>
-    </footer>
+<footer class="footer">
+    <div class="container">
+        <p>Diseño y programación por Santiago Chiappero - 2024</p>
+    </div>
+</footer>
 
 
 <!-- CDN de jQuery y Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<!-- JS de Bootstrap y dependencias (Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
 
