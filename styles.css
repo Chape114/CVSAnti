@@ -226,11 +226,11 @@ transform: scaleX(1);
 }
 
 .img-right img {
-    width: 100%; /* Ajusta la imagen al 100% del ancho del contenedor */
-    height: auto; /* Mantiene la proporción correcta */
-    /* Efecto de difuminado en el borde inferior */
+    width: 100%;
+    height: auto;
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    z-index: 1; /* Para que la imagen esté detrás del texto */
 }
 
 
