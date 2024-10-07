@@ -230,7 +230,8 @@ transform: scaleX(1);
     height: auto;
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-    z-index: 1; /* Para que la imagen esté detrás del texto */
+    z-index: 0; /* Para que la imagen esté detrás del texto */
+    position: relative;
 }
 
 
@@ -251,7 +252,7 @@ transform: scaleX(1);
     }
 
     .intro-left {
-        order: 2; /* Asegura que el texto esté segundo */
+        order: 1; /* Asegura que el texto esté segundo */
         text-align: center; /* Centrar texto */
         position: relative; /* Posición relativa para centrar el texto sobre la imagen */
         margin-top: -40%; /* Ajustar la posición del texto para superponer sobre la imagen */
